@@ -1,0 +1,77 @@
+.userAuth-main-container {
+  background-color: var(--extra-color);
+  width: 50%;
+  margin: auto;
+  padding: var(--gap-large);
+  border-radius: var(--radius-small);
+}
+
+.userAuth-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 1rem;
+  padding: var(--gap-large);
+  align-items: center;
+  justify-content: center;
+}
+.firstName,
+.lastName,
+.email,
+.password {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.firstName input,
+.lastName input,
+.email input,
+.password input {
+  padding: var(--gap-small);
+  border-radius: var(--radius-small);
+  width: 100%;
+}
+
+.login-extra {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-extra div {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.signup-btn,
+.login-btn {
+  background-color: var(--primary-color);
+  padding: var(--gap-medium);
+  border-radius: var(--radius-small);
+  width: 100%;
+  color: var(--secondary-color);
+}
+
+.signup-login-btn:hover,
+.login-signup-btn:hover {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.userAuth-container button {
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .userAuth-main-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 315px) {
+  .userAuth-container {
+    padding: 0;
+  }
+}

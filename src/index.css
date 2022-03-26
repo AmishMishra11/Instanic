@@ -1,0 +1,83 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* font size */
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1.2rem;
+}
+
+/* colors */
+:root {
+  --primary-color: #ae3645;
+  --background-color: #1e413d;
+  --secondary-color: #dfe4cd;
+  --extra-color: #777da7;
+
+  --hover-color: #5925b2;
+
+  /* gap // spacing */
+
+  --gap-largest: 2rem 3.5rem;
+  --gap-large: 1.5rem 2.5rem;
+  --gap-medium: 1rem 1.5rem;
+  --gap-small: 0.5rem 1rem;
+  --gap-smallest: 0.25rem 0.5rem;
+
+  /* border radius variables */
+  --radius-small: 5px;
+  --radius-medium: 10px;
+  --radius-large: 15px;
+  --radius-circle: 50%;
+}
+
+/* default decoration for list link and buttons */
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* z-index */
+.zi-1 {
+  z-index: 5;
+}
+.zi-2 {
+  z-index: 10;
+}
+.zi-3 {
+  z-index: 15;
+}
+.zi-4 {
+  z-index: 20;
+}
+.zi-5 {
+  z-index: 25;
+}
+
+/* media queries */
+@media (max-width: 800px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 62.5%;
+  }
+}

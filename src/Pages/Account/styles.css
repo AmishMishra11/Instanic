@@ -1,0 +1,35 @@
+.account-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+.account-container {
+  display: flex;
+  gap: 2rem;
+  padding: var(--gap-largest);
+}
+
+.account-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.account-image {
+  width: 100%;
+  max-width: 40rem;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .account-container {
+    flex-direction: column;
+  }
+
+  .account-image {
+    max-width: 20rem;
+  }
+}
