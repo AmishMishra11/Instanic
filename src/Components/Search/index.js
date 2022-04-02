@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-function Search() {
+function Search({ setFilteron }) {
   return (
     <div className="search-container">
       <button>
@@ -8,7 +8,7 @@ function Search() {
       </button>
       <input placeholder="Search" />
 
-      <button>
+      <button className="show-filters" onClick={() => setFilteron(true)}>
         <i class="fas fa-2x fa-light fa-sliders"></i>
       </button>
     </div>

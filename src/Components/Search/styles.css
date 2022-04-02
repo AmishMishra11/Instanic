@@ -16,7 +16,5 @@
 }
 
 .search-container input:focus {
-  flex-grow: 4;
-  margin: var(--gap-smallest);
-  border: none;
+  outline: none;
 }

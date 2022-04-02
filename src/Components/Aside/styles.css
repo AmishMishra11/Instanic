@@ -1,15 +1,22 @@
 .aside-container {
   background-color: var(--background-color);
   color: var(--secondary-color);
-  width: 15rem;
+  width: 20%;
   height: 44rem;
+
+  border: 2px solid black;
+  border-right: 3px solid var(--secondary-color);
+}
+
+.options {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+}
 
-  border: 2px solid black;
-  border-right: 3px solid var(--secondary-color);
+.aside-mobile {
+  display: none;
 }
 
 .aside-container ul {
@@ -45,4 +52,44 @@
   padding: var(--gap-small);
   border-radius: 5px;
   color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .aside-container a {
+    font-size: 0.8rem;
+    padding: var(--gap-smallest);
+  }
+}
+
+@media (max-width: 800px) {
+  .aside-container a {
+    font-size: 1rem;
+    padding: var(--gap-small);
+  }
+
+  .aside-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobile-button i {
+    color: var(--secondary-color);
+  }
+
+  .options {
+    display: none;
+  }
+
+  .aside-container {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .show {
+    display: flex;
+  }
+  .newnote {
+    margin-bottom: 1rem;
+  }
 }

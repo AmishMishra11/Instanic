@@ -11,3 +11,35 @@
   margin: 0 auto;
   padding: 3rem;
 }
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 800px) {
+  .container-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aside-container {
+    width: 100%;
+  }
+
+  .main-card-container {
+    width: 80%;
+  }
+
+  .search-container button i {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-card-container {
+    width: 90%;
+  }
+  .search-container input {
+    width: 5rem;
+  }
+}
