@@ -80,6 +80,5 @@
 @media (max-width: 600px) {
   .landing-container {
     justify-content: flex-end;
-    height: 100%;
   }
 }

@@ -1,0 +1,95 @@
+.aside-container {
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  width: 20%;
+  height: 44rem;
+
+  border: 2px solid black;
+  border-right: 3px solid var(--secondary-color);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.aside-mobile {
+  display: none;
+}
+
+.aside-container ul {
+  padding: 1rem;
+}
+
+.aside-container ul .active {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 3rem;
+}
+
+.aside-container li {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.aside-container a {
+  display: block;
+  color: var(--secondary-color);
+  line-height: 10px;
+  padding: var(--gap-small);
+  width: 100%;
+  margin: 1rem;
+}
+
+.aside-container i {
+  padding: 10px;
+}
+
+.newnote {
+  background-color: var(--primary-color);
+  padding: var(--gap-small);
+  border-radius: 5px;
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .aside-container a {
+    font-size: 0.8rem;
+    padding: var(--gap-smallest);
+  }
+}
+
+@media (max-width: 800px) {
+  .aside-container a {
+    font-size: 1rem;
+    padding: var(--gap-small);
+  }
+
+  .aside-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobile-button i {
+    color: var(--secondary-color);
+  }
+
+  .options {
+    display: none;
+  }
+
+  .aside-container {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .show {
+    display: flex;
+  }
+  .newnote {
+    margin-bottom: 1rem;
+  }
+}

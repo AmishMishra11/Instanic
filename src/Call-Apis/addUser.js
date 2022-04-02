@@ -17,7 +17,7 @@ export const addUser = async (
         payload: res.data.createdUser,
       });
       localStorage.setItem("token", res.data.encodedToken);
-      navigate("/");
+      navigate("/authpage");
     }
   } catch (e) {
     console.log("error occured:  ", tempEmail, tempPassword, e);
