@@ -1,0 +1,22 @@
+.nav-container {
+  background-color: var(--background-color);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid black;
+  border-bottom: 3px solid var(--secondary-color);
+}
+.nav-container h2 {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.nav-login {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+.nav-login i {
+  padding: 1rem;
+}

@@ -1,0 +1,48 @@
+.aside-container {
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  width: 15rem;
+  height: 44rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  border: 2px solid black;
+  border-right: 3px solid var(--secondary-color);
+}
+
+.aside-container ul {
+  padding: 1rem;
+}
+
+.aside-container ul .active {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 3rem;
+}
+
+.aside-container li {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.aside-container a {
+  display: block;
+  color: var(--secondary-color);
+  line-height: 10px;
+  padding: var(--gap-small);
+  width: 100%;
+  margin: 1rem;
+}
+
+.aside-container i {
+  padding: 10px;
+}
+
+.newnote {
+  background-color: var(--primary-color);
+  padding: var(--gap-small);
+  border-radius: 5px;
+  color: var(--secondary-color);
+}

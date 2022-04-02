@@ -1,0 +1,13 @@
+.home-container {
+  height: 100vh;
+}
+
+.container-main {
+  display: flex;
+}
+
+.main-card-container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 3rem;
+}
