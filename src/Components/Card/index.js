@@ -1,13 +1,19 @@
 import React from "react";
+import { addArchive } from "../../Call-Apis/addArchive";
+import { restoreArchive } from "../../Call-Apis/restoreArchive";
 
 import { useNote } from "../../Contexts/NoteContext";
 import "./styles.css";
 function Card({ item }) {
-  const { noteTitle, noteData, createdAt } = item;
+  const { noteTitle, noteData, createdAt, _id } = item;
 
   const date = createdAt ? createdAt.toString().substr(0, 10) : "";
 
-  const { dispatchNote } = useNote();
+  const { dispatchNote, stateNote } = useNote();
+
+  const { archiveNotes } = stateNote;
+
+  const isArchive = archiveNotes.some((item) => item._id === _id);
 
   return (
     <div className="card-container">
@@ -32,7 +38,14 @@ function Card({ item }) {
         <div className="card-icons">
           <i className="fas fa-light fa-palette"></i>
           <i className="fas fa-light fa-tag"></i>
-          <i className="fas fa-light fa-box-archive"></i>
+          <i
+            className="fas fa-light fa-box-archive"
+            onClick={() =>
+              isArchive
+                ? restoreArchive(_id, dispatchNote)
+                : addArchive(_id, item, dispatchNote)
+            }
+          ></i>
           <i className="fas fa-light fa-trash"></i>
         </div>
       </div>

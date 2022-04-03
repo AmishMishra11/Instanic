@@ -3,7 +3,6 @@
   color: var(--secondary-color);
   width: 20%;
   height: 44rem;
-
   border: 2px solid black;
   border-right: 3px solid var(--secondary-color);
 }

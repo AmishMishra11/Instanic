@@ -1,0 +1,10 @@
+.archive-container .fa-box-archive {
+  color: var(--primary-color);
+}
+
+.archive-container .fa-pen-to-square,
+.archive-container .fa-thumbtack,
+.archive-container .fa-palette,
+.archive-container .fa-tag {
+  display: none;
+}

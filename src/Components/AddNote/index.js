@@ -1,8 +1,5 @@
 import React from "react";
 import { useNote } from "../../Contexts/NoteContext";
-
-import { v4 as uuid } from "uuid";
-
 import "./styles.css";
 import { useState } from "react";
 import { addNewNote } from "../../Call-Apis/addNewNote";
@@ -30,7 +27,6 @@ function AddNote() {
             isPinned: false,
             color: "",
             lables: [],
-            isArchive: false,
             isTrash: false,
             createdAt: new Date(),
           },
@@ -43,7 +39,6 @@ function AddNote() {
             isPinned: false,
             color: "",
             lables: [],
-            isArchive: false,
             isTrash: false,
             createdAt: new Date(),
           },
