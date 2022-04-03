@@ -6,32 +6,54 @@ import { v4 as uuid } from "uuid";
 import "./styles.css";
 import { useState } from "react";
 import { addNewNote } from "../../Call-Apis/addNewNote";
+import { editNote } from "../../Call-Apis/editNote";
 
-function AddNote({ setNewNoteon }) {
-  const { setNewNote } = useNote();
+function AddNote() {
+  const { stateNote, dispatchNote } = useNote();
 
-  const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
+  const { currentEditItem } = stateNote;
+
+  const [title, setTitle] = useState(
+    currentEditItem?.noteTitle ? currentEditItem?.noteTitle : ""
+  );
+  const [body, setBody] = useState(
+    currentEditItem?.noteData ? currentEditItem?.noteData : ""
+  );
 
   const AddNewNoteFunction = () => {
-    addNewNote(
-      {
-        id: uuid(),
-        noteTitle: title,
-        noteData: body,
-        isPinned: false,
-        color: "",
-        lables: [],
-        isArchive: false,
-        isTrash: false,
-        createdAt: new Date(),
-      },
-      setNewNote
-    );
+    Object.keys(currentEditItem).length !== 0
+      ? editNote(
+          currentEditItem._id,
+          {
+            noteTitle: title,
+            noteData: body,
+            isPinned: false,
+            color: "",
+            lables: [],
+            isArchive: false,
+            isTrash: false,
+            createdAt: new Date(),
+          },
+          dispatchNote
+        )
+      : addNewNote(
+          {
+            noteTitle: title,
+            noteData: body,
+            isPinned: false,
+            color: "",
+            lables: [],
+            isArchive: false,
+            isTrash: false,
+            createdAt: new Date(),
+          },
+          dispatchNote
+        );
 
     setTitle("");
     setBody("");
-    setNewNoteon(false);
+
+    dispatchNote({ type: "DISPLAY_NOTE_EDITOR", payload: { show: false } });
   };
 
   return (
@@ -41,7 +63,12 @@ function AddNote({ setNewNoteon }) {
         <button>
           <i
             className="fa-solid fa-2x fa-xmark"
-            onClick={() => setNewNoteon(false)}
+            onClick={() =>
+              dispatchNote({
+                type: "DISPLAY_NOTE_EDITOR",
+                payload: { show: false },
+              })
+            }
           ></i>
         </button>
       </header>

@@ -14,6 +14,12 @@
   justify-content: space-between;
 }
 
+.header-icons i {
+  cursor: pointer;
+  padding-left: 1rem;
+  padding: var(--gap-small);
+}
+
 .card-container main {
   padding: var(--gap-small);
 }
