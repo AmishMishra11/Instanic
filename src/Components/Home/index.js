@@ -6,10 +6,12 @@ import "./styles.css";
 import { loadNewNotes } from "../../Call-Apis/loadNewNotes";
 
 function Home() {
-  const { newNote, setNewNote } = useNote();
+  const { stateNote, dispatchNote } = useNote();
+
+  const { newNote } = stateNote;
 
   useEffect(() => {
-    loadNewNotes(setNewNote);
+    loadNewNotes(dispatchNote);
   }, []);
 
   return (
@@ -17,7 +19,7 @@ function Home() {
       Home
       <ul className="note-list">
         {newNote.map((item) => (
-          <Card key={item.id} item={item} />
+          <Card key={item._id} item={item} />
         ))}
       </ul>
     </div>

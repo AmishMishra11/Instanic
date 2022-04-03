@@ -1,12 +1,12 @@
 import axios from "axios";
 
-export const addNewNote = async (note, dispatchNote) => {
+export const editNote = async (id, note, dispatchNote) => {
   const newToken = localStorage.getItem("token");
 
   try {
     const res = await axios({
       method: "POST",
-      url: "/api/notes",
+      url: `/api/notes/${id}`,
       data: { note },
       headers: {
         authorization: newToken,

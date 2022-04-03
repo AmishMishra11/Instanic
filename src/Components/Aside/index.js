@@ -2,19 +2,21 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "./styles.css";
+import { useNote } from "../../Contexts/NoteContext";
 
-function Aside({ setNewNoteon }) {
+function Aside() {
   const [showMobile, setShowMobile] = useState(false);
+
+  const { dispatchNote } = useNote();
+
   return (
     <aside className="aside-container">
-      <div className="aside-mobile">
+      <div
+        className="aside-mobile"
+        onClick={() => setShowMobile((showMobile) => !showMobile)}
+      >
         <h2>Options</h2>
-        <button
-          className="mobile-button"
-          onClick={() => setShowMobile((showMobile) => !showMobile)}
-        >
-          <i className="fa-solid fa-arrows-up-down"></i>
-        </button>
+        <i className="fa-solid fa-arrows-up-down"></i>
       </div>
 
       <div className={`options  ${showMobile ? "show" : "hide"} `}>
@@ -51,7 +53,15 @@ function Aside({ setNewNoteon }) {
             </NavLink>
           </li>
         </ul>
-        <button className="newnote" onClick={() => setNewNoteon(true)}>
+        <button
+          className="newnote"
+          onClick={() =>
+            dispatchNote({
+              type: "DISPLAY_NOTE_EDITOR",
+              payload: { show: true },
+            })
+          }
+        >
           Create New Note
         </button>
       </div>
