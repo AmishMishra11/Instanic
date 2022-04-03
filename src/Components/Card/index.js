@@ -1,23 +1,23 @@
 import React from "react";
 import "./styles.css";
-function Card() {
+function Card({ item }) {
+  const { noteTitle, noteData, createdAt, id } = item;
+  const date = createdAt.toString().substr(0, 10);
+
   return (
     <div className="card-container">
       <header>
-        <h3>Title of Note</h3>
-        <i class="fas fa-thumbtack"></i>
+        <h3>{noteTitle}</h3>
+        <i className="fas fa-thumbtack"></i>
       </header>
-      <main>
-        Main Body Of The Card Main Body Of The Card Main Body Of The Card Main
-        Body Of The Card
-      </main>
+      <main>{noteData}</main>
       <div className="card-footer">
-        <p>Created on 26/10/2021</p>
+        <p>Created on {date}</p>
         <div className="card-icons">
-          <i class="fas fa-light fa-palette"></i>
-          <i class="fas fa-light fa-tag"></i>
-          <i class="fas fa-light fa-box-archive"></i>
-          <i class="fas fa-light fa-trash"></i>
+          <i className="fas fa-light fa-palette"></i>
+          <i className="fas fa-light fa-tag"></i>
+          <i className="fas fa-light fa-box-archive"></i>
+          <i className="fas fa-light fa-trash"></i>
         </div>
       </div>
     </div>

@@ -24,6 +24,10 @@
   align-items: center;
 }
 
+.card-footer p {
+  font-size: 0.8rem;
+}
+
 .card-icons {
   display: flex;
 }
