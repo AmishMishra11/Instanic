@@ -13,7 +13,10 @@ function Nav() {
       <h2 onClick={() => navigate("/")}>Instanic</h2>
       <div className="nav-login">
         Amish
-        <i onClick={logout} class="fa-solid fa-arrow-right-from-bracket"></i>
+        <i
+          onClick={logout}
+          className="fa-solid fa-arrow-right-from-bracket"
+        ></i>
       </div>
     </nav>
   );

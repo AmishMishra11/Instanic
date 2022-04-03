@@ -6,7 +6,7 @@ function Filters({ setFilteron }) {
       <header className="filter-header">
         <h3>Sort and Filter Notes</h3>
         <button className="remove-filters" onClick={() => setFilteron(false)}>
-          <i class="fa-solid fa-2x fa-xmark"></i>
+          <i className="fa-solid fa-2x fa-xmark"></i>
         </button>
       </header>
 
