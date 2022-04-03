@@ -8,7 +8,7 @@ import { useState } from "react";
 import { addNewNote } from "../../Call-Apis/addNewNote";
 
 function AddNote({ setNewNoteon }) {
-  const { newNote, setNewNote } = useNote();
+  const { setNewNote } = useNote();
 
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
@@ -32,8 +32,6 @@ function AddNote({ setNewNoteon }) {
     setTitle("");
     setBody("");
     setNewNoteon(false);
-
-    // console.log(newNote);
   };
 
   return (

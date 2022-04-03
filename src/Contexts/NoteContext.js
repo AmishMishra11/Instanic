@@ -1,14 +1,9 @@
-import { createContext, useContext, useState, useEffect } from "react";
-import { loadNewNotes } from "../Call-Apis/loadNewNotes";
+import { createContext, useContext, useState } from "react";
 const NoteContext = createContext(null);
 
 const useNote = () => useContext(NoteContext);
 
 const NoteContextProvider = ({ children }) => {
-  // useEffect(() => {
-  //   loadNewNotes();
-  // }, []);
-
   const [newNote, setNewNote] = useState([]);
 
   return (
