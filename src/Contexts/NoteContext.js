@@ -9,6 +9,7 @@ const NoteContextProvider = ({ children }) => {
     newNote: [],
     displayNoteEditor: false,
     currentEditItem: {},
+    archiveNotes: [],
   });
 
   return (

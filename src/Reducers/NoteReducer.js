@@ -16,6 +16,9 @@ export const NoteReducer = (stateNote, actionNote) => {
         displayNoteEditor: actionNote.payload.show,
       };
 
+    case "SET_ARCHIVE":
+      return { ...stateNote, archiveNotes: actionNote.payload };
+
     default:
       return stateNote;
   }

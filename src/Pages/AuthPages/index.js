@@ -32,7 +32,6 @@ function AuthPage() {
 
           {displayNoteEditor && <NewNote />}
 
-          {/* new component based on what is selected "default is home" */}
           <Outlet />
         </div>
       </div>

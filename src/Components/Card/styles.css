@@ -15,9 +15,12 @@
 }
 
 .header-icons i {
-  cursor: pointer;
   padding-left: 1rem;
   padding: var(--gap-small);
+}
+
+i {
+  cursor: pointer;
 }
 
 .card-container main {

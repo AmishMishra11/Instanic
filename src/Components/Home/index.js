@@ -2,12 +2,10 @@ import React, { useEffect } from "react";
 import { useNote } from "../../Contexts/NoteContext";
 import Card from "../Card";
 import "./styles.css";
-
 import { loadNewNotes } from "../../Call-Apis/loadNewNotes";
 
 function Home() {
   const { stateNote, dispatchNote } = useNote();
-
   const { newNote } = stateNote;
 
   useEffect(() => {
