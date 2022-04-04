@@ -14,7 +14,7 @@ export const addUser = async (
     if (res.status === 200) {
       dispatchAuth({
         type: "GET_USER_DETAILS",
-        payload: res.data.createdUser,
+        payload: res.data.foundUser,
       });
       localStorage.setItem("token", res.data.encodedToken);
       navigate("/authpage");

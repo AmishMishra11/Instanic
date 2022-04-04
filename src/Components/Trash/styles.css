@@ -1,0 +1,15 @@
+.trash-container .already-trash {
+  display: flex;
+}
+
+.trash-container .fa-trash-arrow-up {
+  color: var(--primary-color);
+}
+
+.trash-container .fa-pen-to-square,
+.trash-container .fa-thumbtack,
+.trash-container .fa-palette,
+.trash-container .fa-tag,
+.trash-container .fa-box-archive {
+  display: none;
+}

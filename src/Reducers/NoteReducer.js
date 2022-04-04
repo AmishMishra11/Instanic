@@ -19,6 +19,15 @@ export const NoteReducer = (stateNote, actionNote) => {
     case "SET_ARCHIVE":
       return { ...stateNote, archiveNotes: actionNote.payload };
 
+    case "SET_TRASH":
+      return {
+        ...stateNote,
+        trashNotes: [...stateNote.trashNotes, actionNote.payload],
+      };
+
+    case "DELETE_NOTE":
+      return { ...stateNote, trashNotes: actionNote.payload };
+
     default:
       return stateNote;
   }

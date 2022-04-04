@@ -1,5 +1,8 @@
 import React from "react";
 import { addArchive } from "../../Call-Apis/addArchive";
+import { addNewNote } from "../../Call-Apis/addNewNote";
+import { removeArchive } from "../../Call-Apis/removeArchive";
+import { removeNote } from "../../Call-Apis/removeNote";
 import { restoreArchive } from "../../Call-Apis/restoreArchive";
 
 import { useNote } from "../../Contexts/NoteContext";
@@ -11,9 +14,19 @@ function Card({ item }) {
 
   const { dispatchNote, stateNote } = useNote();
 
-  const { archiveNotes } = stateNote;
+  const { archiveNotes, trashNotes } = stateNote;
 
   const isArchive = archiveNotes.some((item) => item._id === _id);
+  const isTrash = trashNotes.some((item) => item._id === _id);
+
+  const deleteNoteFunction = () => {
+    const newItem = trashNotes.filter((item) => item._id !== _id);
+
+    dispatchNote({
+      type: "DELETE_NOTE",
+      payload: newItem,
+    });
+  };
 
   return (
     <div className="card-container">
@@ -46,7 +59,38 @@ function Card({ item }) {
                 : addArchive(_id, item, dispatchNote)
             }
           ></i>
-          <i className="fas fa-light fa-trash"></i>
+
+          {isTrash ? (
+            <div className="already-trash">
+              <i
+                className="fa-solid fa-trash-arrow-up"
+                onClick={() => {
+                  deleteNoteFunction();
+                  addNewNote(item, dispatchNote);
+                }}
+              ></i>
+
+              <i
+                className="fas fa-light fa-trash"
+                onClick={() => {
+                  deleteNoteFunction();
+                }}
+              ></i>
+            </div>
+          ) : isArchive ? (
+            <i
+              className="fas fa-light fa-trash"
+              onClick={() => {
+                removeArchive(_id, dispatchNote);
+                removeNote(_id, item, dispatchNote);
+              }}
+            ></i>
+          ) : (
+            <i
+              className="fas fa-light fa-trash"
+              onClick={() => removeNote(_id, item, dispatchNote)}
+            ></i>
+          )}
         </div>
       </div>
     </div>
