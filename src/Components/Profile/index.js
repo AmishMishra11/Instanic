@@ -7,9 +7,6 @@ function Profile() {
   } = useAuth();
 
   const { firstName, lastName, email } = userDatails[0];
-  console.log(firstName);
-
-  console.log(userDatails);
 
   return (
     <div>

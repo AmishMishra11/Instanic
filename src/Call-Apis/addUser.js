@@ -11,7 +11,6 @@ export const addUser = async (
       url: "/api/auth/login",
       data: { email: tempEmail, password: tempPassword },
     });
-    console.log(res);
     if (res.status === 200) {
       dispatchAuth({
         type: "GET_USER_DETAILS",
