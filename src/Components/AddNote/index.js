@@ -17,6 +17,8 @@ function AddNote() {
     currentEditItem?.noteData ? currentEditItem?.noteData : ""
   );
 
+  const [label, setlabel] = useState("High");
+
   const AddNewNoteFunction = () => {
     Object.keys(currentEditItem).length !== 0
       ? editNote(
@@ -25,10 +27,11 @@ function AddNote() {
             noteTitle: title,
             noteData: body,
             isPinned: false,
-            color: "",
-            lables: [],
+            color: true,
+            tags: [],
+            labels: label,
             isTrash: false,
-            createdAt: new Date(),
+            createdAt: Date.now(),
           },
           dispatchNote
         )
@@ -37,10 +40,11 @@ function AddNote() {
             noteTitle: title,
             noteData: body,
             isPinned: false,
-            color: "",
-            lables: [],
+            color: true,
+            tags: [],
+            labels: label,
             isTrash: false,
-            createdAt: new Date(),
+            createdAt: Date.now(),
           },
           dispatchNote
         );
@@ -85,7 +89,23 @@ function AddNote() {
       </div>
 
       <div className="newnote-submit">
-        <button onClick={AddNewNoteFunction}>Add Note</button>
+        <div className="box-2">
+          <div className="newnote-label">
+            Priority:
+            <select
+              className="filterby-input"
+              placeholder="Tags"
+              onClick={(e) => setlabel(e.target.value)}
+            >
+              <option value="High">High</option>
+              <option value="Low">Low</option>
+            </select>
+          </div>
+
+          <button className="submit-note" onClick={AddNewNoteFunction}>
+            Add Note
+          </button>
+        </div>
       </div>
     </div>
   );

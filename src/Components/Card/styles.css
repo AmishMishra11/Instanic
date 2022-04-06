@@ -1,13 +1,19 @@
 .card-container {
   background-color: var(--background-color);
+  color: var(--secondary-color);
+
   margin: 1rem 0;
   border-radius: var(--radius-medium);
   padding: var(--gap-small);
 }
 
+.card-container.active {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+}
+
 .card-container > * {
   padding: var(--gap-small);
-  color: var(--secondary-color);
 }
 .card-container header {
   display: flex;
@@ -33,6 +39,21 @@ i {
   align-items: center;
 }
 
+.extra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.extra-tags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.9rem;
+  gap: 5px;
+}
+
 .card-footer p {
   font-size: 0.8rem;
 }
@@ -46,6 +67,6 @@ i {
 }
 
 /* extra */
-.fa-thumbtack {
+.active-pin {
   color: var(--primary-color);
 }

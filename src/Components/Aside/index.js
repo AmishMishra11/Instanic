@@ -29,9 +29,9 @@ function Aside() {
           </li>
 
           <li>
-            <NavLink to="/authpage/lables">
+            <NavLink to="/authpage/labels">
               <i className="fas fa-light fa-tag"></i>
-              <span>Lables</span>
+              <span>Labels</span>
             </NavLink>
           </li>
           <li>

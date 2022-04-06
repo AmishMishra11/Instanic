@@ -1,0 +1,9 @@
+.labels-container {
+  overflow-y: auto;
+  height: 60vh;
+  padding: var(--gap-small);
+}
+
+.label-list {
+  height: fit-content;
+}

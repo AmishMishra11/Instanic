@@ -3,3 +3,9 @@
   height: 60vh;
   padding: var(--gap-small);
 }
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
