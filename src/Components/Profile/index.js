@@ -1,20 +1,24 @@
 import React from "react";
-import { useAuth } from "../../Contexts/AuthContext";
+import "./styles.css";
+import User from "../../assets/user.svg";
 
 function Profile() {
-  const {
-    stateAuth: { userDatails },
-  } = useAuth();
-
-  const { firstName, lastName, email } = userDatails[0];
+  const tempFirst = localStorage.getItem("first");
+  const tempLast = localStorage.getItem("last");
+  const tempEmail = localStorage.getItem("email");
 
   return (
-    <div>
-      <h1>Profile</h1>
+    <div className="profile-page">
+      <div className="user-img">
+        <img className="account-image" src={User} alt="home " />
+      </div>
+      <div className="uesr-info">
+        <h1>Profile</h1>
 
-      <h3>First Name: {firstName}</h3>
-      <h3>Last Name: {lastName}</h3>
-      <h3>Email: {email}</h3>
+        <h4>First Name: {tempFirst}</h4>
+        <h4>Last Name: {tempLast}</h4>
+        <h4>Email: {tempEmail}</h4>
+      </div>
     </div>
   );
 }

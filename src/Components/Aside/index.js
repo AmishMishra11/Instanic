@@ -7,8 +7,6 @@ import { useNote } from "../../Contexts/NoteContext";
 function Aside() {
   const [showMobile, setShowMobile] = useState(false);
 
-  const { dispatchNote } = useNote();
-
   return (
     <aside className="aside-container">
       <div
@@ -53,17 +51,6 @@ function Aside() {
             </NavLink>
           </li>
         </ul>
-        <button
-          className="newnote"
-          onClick={() =>
-            dispatchNote({
-              type: "DISPLAY_NOTE_EDITOR",
-              payload: { show: true },
-            })
-          }
-        >
-          Create New Note
-        </button>
       </div>
     </aside>
   );

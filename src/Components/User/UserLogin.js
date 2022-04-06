@@ -1,13 +1,11 @@
 import React from "react";
 import "./styles.css";
-
 import { useNavigate } from "react-router-dom";
-
 import { useState } from "react";
-
 import { useAuth } from "../../Contexts/AuthContext";
-
 import { addUser } from "../../Call-Apis/addUser";
+
+import { toast } from "react-toastify";
 
 function UserLogin() {
   const EMAIL_REGEX = new RegExp(
@@ -32,6 +30,20 @@ function UserLogin() {
     });
   };
 
+  const inputAlert = () => {
+    toast.warn("Please fill all the fields", {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  };
+
+  const validEmail = () => {
+    toast.warn("Please Enter Valid Email", {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  };
+
   return (
     <div className="userAuth-main-container">
       <main className="userAuth-container">
@@ -47,6 +59,7 @@ function UserLogin() {
             id="email-id"
             placeholder="name@company.com"
             name="tempEmail"
+            value={tempEmail}
             onChange={handleChange}
           />
         </div>
@@ -61,6 +74,7 @@ function UserLogin() {
             id="password-id"
             placeholder="**********"
             name="tempPassword"
+            value={tempPassword}
             onChange={handleChange}
           />
         </div>
@@ -79,12 +93,24 @@ function UserLogin() {
           onClick={() =>
             tempEmail && tempPassword
               ? !EMAIL_REGEX.test(tempEmail)
-                ? alert("Please Enter Valid Email")
+                ? validEmail()
                 : addUser(tempEmail, tempPassword, dispatchAuth, Navigate)
-              : alert("Please fill all the fields")
+              : inputAlert()
           }
         >
           Login
+        </button>
+
+        <button
+          className="guest-login-btn"
+          onClick={() =>
+            setTempUserDetail({
+              tempEmail: "test@gmail.com",
+              tempPassword: "test",
+            })
+          }
+        >
+          Guest credentials
         </button>
 
         <button

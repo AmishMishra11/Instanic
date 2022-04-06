@@ -33,7 +33,18 @@ function Home() {
   return (
     <div>
       <div className="home">
-        <h3>Home</h3>
+        <button
+          className="newnote"
+          onClick={() =>
+            dispatchNote({
+              type: "DISPLAY_NOTE_EDITOR",
+              payload: { show: true },
+            })
+          }
+        >
+          Create New Note
+        </button>
+
         <button
           className="clear-filters"
           onClick={() => {
@@ -44,6 +55,7 @@ function Home() {
         </button>
       </div>
 
+      <h3 className="home-title">Home</h3>
       <div className="labels-container">
         <h4>Pinned Notes</h4>
 
@@ -54,7 +66,7 @@ function Home() {
             ))}
           </ul>
         ) : (
-          <div>Nothing Here</div>
+          <div className="nothing">Nothing Here</div>
         )}
 
         <h4>Other Notes</h4>
@@ -66,7 +78,7 @@ function Home() {
             ))}
           </ul>
         ) : (
-          <div>Nothing Here</div>
+          <div className="nothing">Nothing Here</div>
         )}
       </div>
     </div>

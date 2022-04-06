@@ -1,4 +1,5 @@
 import axios from "axios";
+
 export const loadNewNotes = async (dispatchNote) => {
   const newToken = localStorage.getItem("token");
   try {

@@ -64,6 +64,14 @@
   font-size: 1rem;
 }
 
+.guest-login-btn {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  padding: var(--gap-medium);
+  border-radius: var(--radius-small);
+  width: 100%;
+}
+
 @media (max-width: 600px) {
   .userAuth-main-container {
     width: 100%;

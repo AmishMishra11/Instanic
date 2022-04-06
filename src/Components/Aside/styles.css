@@ -46,14 +46,6 @@
   padding: 10px;
 }
 
-.newnote {
-  background-color: var(--primary-color);
-  padding: var(--gap-small);
-  border-radius: 5px;
-  color: var(--secondary-color);
-  font-size: 1rem;
-}
-
 @media (max-width: 1000px) {
   .aside-container a {
     font-size: 0.8rem;

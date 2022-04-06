@@ -16,6 +16,12 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 1000px) {
+  .main-card-container {
+    width: 90%;
+  }
+}
+
 @media (max-width: 800px) {
   .container-main {
     display: flex;

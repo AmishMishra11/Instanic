@@ -1,0 +1,34 @@
+.profile-page {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.user-img {
+  width: 100%;
+  max-width: 16rem;
+  height: auto;
+}
+
+.uesr-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 15rem;
+}
+
+@media (max-width: 600px) {
+  .user-img {
+    max-width: 14rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .user-img {
+    max-width: 16;
+  }
+
+  .profile-page {
+    flex-direction: column;
+  }
+}

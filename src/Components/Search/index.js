@@ -5,7 +5,7 @@ import "./styles.css";
 function Search({ setFilteron }) {
   const [searchText, setSearchText] = useState("");
 
-  const { stateFilter, dispatchFilter } = useFilter();
+  const { dispatchFilter } = useFilter();
 
   return (
     <div className="search-container">

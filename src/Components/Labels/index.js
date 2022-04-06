@@ -25,7 +25,7 @@ function Labels() {
             ))}
           </ul>
         ) : (
-          <div>Nothing Here</div>
+          <div className="nothing">Nothing Here</div>
         )}
 
         <h4>Low Priority</h4>
@@ -37,7 +37,7 @@ function Labels() {
             ))}
           </ul>
         ) : (
-          <div>Nothing Here</div>
+          <div className="nothing">Nothing Here</div>
         )}
       </div>
     </div>
