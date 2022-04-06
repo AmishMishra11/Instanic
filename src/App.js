@@ -6,7 +6,7 @@ import Sighup from "./Pages/Account/Sighup";
 import AuthPage from "./Pages/AuthPages";
 import Home from "./Components/Home";
 import Archive from "./Components/Archive";
-import Labels from "./Components/Lables";
+import Labels from "./Components/Labels";
 
 import Profile from "./Components/Profile";
 
@@ -21,7 +21,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="archive" element={<Archive />} />
-          <Route path="lables" element={<Labels />} />
+          <Route path="labels" element={<Labels />} />
           <Route path="trash" element={<Trash />} />
           <Route path="profile" element={<Profile />} />
 

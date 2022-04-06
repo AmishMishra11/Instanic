@@ -1,6 +1,13 @@
 import React from "react";
 import "./styles.css";
+import { useFilter } from "../../Contexts/FilterContext";
+import { useState } from "react";
 function Filters({ setFilteron }) {
+  const { dispatchFilter } = useFilter();
+
+  const [sortInput, setSortInput] = useState("");
+  const [filterbyLabel, setFilterbyLabel] = useState("");
+
   return (
     <div className="filter-container">
       <header className="filter-header">
@@ -12,7 +19,10 @@ function Filters({ setFilteron }) {
 
       <div className="sortby">
         <p>Sort By</p>
-        <select className="sortby-input">
+        <select
+          className="sortby-input"
+          onClick={(e) => setSortInput(e.target.value)}
+        >
           <option value="new">Newest First</option>
           <option value="old">Oldest First</option>
         </select>
@@ -20,33 +30,26 @@ function Filters({ setFilteron }) {
 
       <div className="filterby">
         <p>Filter By</p>
-        <select className="filterby-input">
-          <option value="lables">Lables</option>
-          <option value="archives">Archives</option>
-          <option value="trash">Trash</option>
+        <select
+          className="filterby-input"
+          onClick={(e) => setFilterbyLabel(e.target.value)}
+        >
+          <option value="High">High</option>
+          <option value="Low">Low</option>
         </select>
       </div>
 
-      <div className="filter-lables">
-        <p>Lables </p>
-        <div className="filter-lables-container">
-          <label>
-            <input type="checkbox" />
-            Lable 1
-          </label>
-          <label>
-            <input type="checkbox" />
-            Lable 2
-          </label>
-          <label>
-            <input type="checkbox" />
-            Lable 3
-          </label>
-        </div>
-      </div>
-
       <div className="apply-filter-button">
-        <button className="apply-filters">Done</button>
+        <button
+          className="apply-filters"
+          onClick={() => {
+            dispatchFilter({ type: "SORTING", payload: sortInput });
+            dispatchFilter({ type: "LABELS", payload: filterbyLabel });
+            setFilteron(false);
+          }}
+        >
+          Done
+        </button>
       </div>
     </div>
   );

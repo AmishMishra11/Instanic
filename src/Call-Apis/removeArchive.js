@@ -12,7 +12,6 @@ export const removeArchive = async (id, dispatchNote) => {
       },
     });
 
-    console.log(res);
     if (res.status === 200) {
       dispatchNote({ type: "SET_ARCHIVE", payload: res.data.archives });
     }

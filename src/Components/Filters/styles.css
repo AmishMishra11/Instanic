@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 25rem;
-  height: 24rem;
+  height: 18rem;
   background-color: whitesmoke;
   color: var(--background-color);
   border-radius: var(--radius-small);
@@ -35,11 +35,11 @@
 
 .sortby p,
 .filterby p,
-.filter-lables-container p {
+.filter-tags-container p {
   padding: 5px 0;
 }
 
-.filter-lables-container {
+.filter-tags-container {
   display: flex;
   flex-direction: column;
 }
@@ -47,6 +47,14 @@
 .apply-filter-button {
   display: flex;
   justify-content: flex-end;
+}
+
+.clear-filters {
+  color: var(--primary-color);
+}
+
+.clear-filters:hover {
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .apply-filters {
@@ -58,12 +66,12 @@
 
 @media (max-width: 800px) {
   .filter-container {
-    height: 27rem;
+    height: 20rem;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .filter-container {
-    height: 29rem;
+    height: 22rem;
   }
 }
