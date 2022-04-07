@@ -1,70 +1,81 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Instanic
 
-## Available Scripts
+Note making website made with react. Its includes all the react concepts like routing, contexts, reducers, hooks and its fully responsive.
 
-In the project directory, you can run:
+# Logo
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Instanic Logo](https://user-images.githubusercontent.com/76205249/162257028-b437c4c9-730a-47e4-bbb6-0fe9b4cb669a.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+https://user-images.githubusercontent.com/76205249/162253773-b4bcb1f9-52a2-4a7c-b344-bce6ffc93322.mp4
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project is used by the following companies:
 
-### `yarn eject`
+- Easy to use
+- Login 
+- Login as Guest
+- Signup
+- Brouse by Category
+- Filter, Sort and Search
+- Add Note
+- Edit Note
+- Change Color of Note
+- Add note to Archive
+- Add note to trash
+- Remove note from Archive and trash
+- Delete Note
+- Order Management
+- Responsive
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Components
+1. [Landing Page](https://instanic.netlify.app)
+2. Home Page
+3. Archive Page
+4. Lables Page
+5. Trash Page
+6. User Details
+## Screenshots
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![image](https://user-images.githubusercontent.com/76205249/162258343-3f584228-b96a-49fa-b68d-d4036a3d2d41.png)
 
-## Learn More
+![image](https://user-images.githubusercontent.com/76205249/162258385-9938aab0-2ece-406e-8a2e-6a8eaac8db78.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![image](https://user-images.githubusercontent.com/76205249/162258611-31ac5e66-486a-48dc-9edb-45204cb78280.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](https://user-images.githubusercontent.com/76205249/162258741-ee5f9bab-3656-422c-9ce5-9bc39870f440.png)
 
-### Code Splitting
+![image](https://user-images.githubusercontent.com/76205249/162258666-9703b4b9-0b49-4137-b054-fcff28b54f54.png)
+## Visit
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To visit site use this link
 
-### Analyzing the Bundle Size
+- [Live Link](https://instanic.netlify.app)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Authors
 
-### Advanced Configuration
+- [AmishMishra11](https://github.com/AmishMishra11)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Feedback
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you have any feedback, please reach out to me at amishmishra11@gmail.com
 
-### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://amishmishra.netlify.app)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/amish-mishra-98b43221a/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/The_Scarcastic1)
+
