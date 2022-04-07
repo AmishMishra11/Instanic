@@ -8,12 +8,16 @@ function Trash() {
   const { trashNotes } = stateNote;
   return (
     <div className="trash-container">
-      Trash
-      <ul className="note-list">
-        {trashNotes.map((item) => (
-          <Card key={item._id} item={item} />
-        ))}
-      </ul>
+      <h3>Trash</h3>
+      {trashNotes.length !== 0 ? (
+        <ul className="note-list">
+          {trashNotes.map((item) => (
+            <Card key={item._id} item={item} />
+          ))}
+        </ul>
+      ) : (
+        <div className="nothing">Nothing Here</div>
+      )}
     </div>
   );
 }

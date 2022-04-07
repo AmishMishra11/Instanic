@@ -9,3 +9,27 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.home-title {
+  margin-top: 1rem;
+}
+
+.newnote {
+  background-color: var(--primary-color);
+  padding: var(--gap-small);
+  border-radius: 5px;
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+.clear-filters {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  padding: var(--gap-small);
+  border-radius: 5px;
+}
+
+.nothing {
+  text-align: center;
+  padding: var(--gap-large);
+}

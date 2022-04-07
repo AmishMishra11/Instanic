@@ -7,6 +7,8 @@ import AuthPage from "./Pages/AuthPages";
 import Home from "./Components/Home";
 import Archive from "./Components/Archive";
 import Labels from "./Components/Labels";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Profile from "./Components/Profile";
 
@@ -32,6 +34,8 @@ function App() {
         <Route path="/signup" element={<Sighup />} />
         {/* <Route path="*" element={<NoMatch />} /> */}
       </Routes>
+
+      <ToastContainer />
     </div>
   );
 }

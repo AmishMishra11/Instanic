@@ -1,4 +1,6 @@
 import axios from "axios";
+import { toast } from "react-toastify";
+
 export const addUser = async (
   tempEmail,
   tempPassword,
@@ -17,10 +19,22 @@ export const addUser = async (
         payload: res.data.foundUser,
       });
       localStorage.setItem("token", res.data.encodedToken);
+      localStorage.setItem("first", res.data.foundUser.firstName);
+      localStorage.setItem("last", res.data.foundUser.lastName);
+      localStorage.setItem("email", res.data.foundUser.email);
+
       navigate("/authpage");
+
+      toast.success("Login Success", {
+        position: "top-right",
+        autoClose: 2000,
+      });
     }
   } catch (e) {
     console.log("error occured:  ", tempEmail, tempPassword, e);
-    alert("Invalid email or password");
+    toast.error("Login Failed", {
+      position: "top-right",
+      autoClose: 2000,
+    });
   }
 };

@@ -5,6 +5,8 @@ import { useState } from "react";
 import { addNewNote } from "../../Call-Apis/addNewNote";
 import { editNote } from "../../Call-Apis/editNote";
 
+import { toast } from "react-toastify";
+
 function AddNote() {
   const { stateNote, dispatchNote } = useNote();
 
@@ -18,6 +20,13 @@ function AddNote() {
   );
 
   const [label, setlabel] = useState("High");
+
+  const noteInputAlert = () => {
+    toast.warn("Please fill all the fields", {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  };
 
   const AddNewNoteFunction = () => {
     Object.keys(currentEditItem).length !== 0
@@ -89,23 +98,26 @@ function AddNote() {
       </div>
 
       <div className="newnote-submit">
-        <div className="box-2">
-          <div className="newnote-label">
-            Priority:
-            <select
-              className="filterby-input"
-              placeholder="Tags"
-              onClick={(e) => setlabel(e.target.value)}
-            >
-              <option value="High">High</option>
-              <option value="Low">Low</option>
-            </select>
-          </div>
-
-          <button className="submit-note" onClick={AddNewNoteFunction}>
-            Add Note
-          </button>
+        <div className="newnote-label">
+          Priority :
+          <select
+            className="filterby-input"
+            placeholder="Tags"
+            onClick={(e) => setlabel(e.target.value)}
+          >
+            <option value="High">High</option>
+            <option value="Low">Low</option>
+          </select>
         </div>
+
+        <button
+          className="submit-note"
+          onClick={() =>
+            title && body ? AddNewNoteFunction() : noteInputAlert()
+          }
+        >
+          Add Note
+        </button>
       </div>
     </div>
   );
